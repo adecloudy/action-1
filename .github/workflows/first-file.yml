@@ -12,8 +12,8 @@ jobs:
 
       - name: Executing Shell Script
         run: |
-          chmod +x ascii-script.sh
-          ./ascii-script.sh
+            chmod +x scripts/ascii-script.sh
+            ./scripts/ascii-script.sh
 
       - name: Build and Push Docker Image
         uses: mr-smithers-excellent/docker-build-push@v6
