@@ -15,4 +15,11 @@ jobs:
             ./ascii-script.sh
             chmod +x ascii-script.sh
 
-       
+        - name: Build and push Docker Image
+          uses: mr-smithers-excellent/docker-build-push@v6
+          with:
+            image: adecloudy/ravl
+            registry: docker.io
+            username: ${{ secrets.DOCKER_USERNAME }}
+            password: ${{ secrets.DOCKER_PASSWORD }}
+                
