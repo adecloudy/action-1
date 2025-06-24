@@ -10,6 +10,15 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
+      - name: welcome message
+        run: echo "my first github action on job"
+
+      - name: list files
+        run: ls
+        
+      - name: read file
+        run: cat README.md
+
       - name: Executing Shell Script
         run: |
             chmod +x scripts/ascii-script.sh
