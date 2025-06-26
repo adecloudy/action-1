@@ -10,6 +10,15 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
+      
+      - name: Executing Shell Script
+        run: |
+          chmod +x ascii-script.sh
+          ./ascii-script.sh
+
+           - name: welcome message
+          run: echo "my first github action on job"
+        
       - name: welcome message
         run: echo "my first github action on job"
 
@@ -18,13 +27,7 @@ jobs:
         
       - name: read file
         run: cat README.md
-
-      - name: Executing Shell Script
-        run: |
-          chmod +x ascii-script.sh
-          ./ascii-script.sh
-
-
+   
       - name: Build and Push Docker Image
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
