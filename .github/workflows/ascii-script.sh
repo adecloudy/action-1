@@ -4,6 +4,10 @@
 sudo apt-get update
 sudo apt-get install cowsay -y
 
+./ascii-script.sh  
+chmod +x ascii-script.sh       
+
+
 # Generate ASCII art and write to file
 cowsay -f dragon "Run for cover, I am a Dragon ... RAWR" >> dragon.txt
 
